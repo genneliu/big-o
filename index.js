@@ -154,14 +154,21 @@ function printFirstTwoNames(array) {
 
 
 // Starting Code:
-function squareEveryDigit(number) {
+function squareEveryDigit(numb) {
     let currentStr = "";
     let squaredNums = 0;
-    let stringNum = number.toString();
+    let stringNum = numb.toString();
     for (let i = 0; i <stringNum.length; i++) {
-      curentStr += +stringNum.charAt(i) * +stringNum.charAt(i)
+      currentStr += +stringNum.charAt(i) * +stringNum.charAt(i)
     }
     return currentStr
     }
 
-squareEveryDigit(946) // When running 946, you should see a result of 811636
+  function squareDigits(num){
+    return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+  }
+  
+
+console.log(squareEveryDigit(946)) // When running 946, you should see a result of 811636
+console.log(squareDigits(946))
+
