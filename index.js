@@ -8,6 +8,7 @@ for (let i = 0; i < numbers.length; i++) {
 // Q: What is the time complexity of the for loop?
 // ANSWER:
 
+// O(n)
 
 // 1.2) You are challenged to find the 4th element of the array, and you came up with this solution:
 
@@ -25,10 +26,15 @@ for (let i = 0; i < numbers.length; i++) {
 // Q: What is the time complexity of of this solution?
 // ANSWER:
 
+// O(1) 
+// return loop prevents it from going past 4
+
 
 // Q: Could you come up with a solution that has a better time complexity? If so, what is that time complexity?
 // ANSWER:
 
+answers = numbers[3]
+// this is constant O(1)
 
 // 2) -------------------------------------------------------
 function printA() {
@@ -39,6 +45,7 @@ function printA() {
 // Q: What is the time complexity of the function?
 // ANSWER:
 
+// O(1)
 
 // 3) -------------------------------------------------------
 function printB(number) {
@@ -49,6 +56,7 @@ function printB(number) {
 // Q: What is the time complexity of the function?
 // ANSWER:
 
+// O(n)
 
 // 4) -------------------------------------------------------
 function printC(num, arr) {
@@ -61,6 +69,7 @@ function printC(num, arr) {
 // Q: What is the time complexity of the function?
 // ANSWER:
 
+// O(n^2)
 
 // 5) -------------------------------------------------------
 for (let i = 0; i < numbers.length; i++) {
@@ -70,6 +79,8 @@ for (let i = 0; i < numbers.length; i++) {
 }
 // Q: What is the time complexity of the nested for loop?
 // ANSWER:
+// O(n^2)
+
 
 
 // 6) -------------------------------------------------------
@@ -78,6 +89,7 @@ let newNumbersA = numbers.filter((num) => {
 })
 // Q: What is the time complexity of the filter higher-order function?
 // ANSWER:
+// O(n)
 
 
 // 7) -------------------------------------------------------
@@ -87,6 +99,7 @@ let newNumbersB = numbers.map((num) => {
 // Q: What is the time complexity of the map higher-order function?
 // ANSWER:
 
+// O(n) 
 
 // 8) -------------------------------------------------------
 function removeNum() {
@@ -94,6 +107,9 @@ function removeNum() {
 }
 // Q: What is the time complexity of the function?
 // ANSWER:
+
+//O(n)
+// splice shifts, so goes through array
 
 
 // 9) -------------------------------------------------------
@@ -103,6 +119,8 @@ function insertNum() {
 // Q: What is the time complexity of the function?
 // ANSWER:
 
+// O(n)
+
 
 // 10) -------------------------------------------------------
 function pushNum() {
@@ -111,6 +129,7 @@ function pushNum() {
 // Q: What is the time complexity of the function?
 // ANSWER:
 
+// O(1)
 
 // 11) -------------------------------------------------------
 // Given an array of names....
@@ -122,6 +141,7 @@ function printFirstTwoNames(array) {
 // Q: What is the time complexity of the function? Could we write this function differently to accomplish the goal of the function in a faster time complexity?
 // ANSWER:
 
+// O(1)
 
 // Advanced Challenges
 // Solve the following challenge. Once complete, determine the time complexity of your solution. Consider if there are ways to solve the challenge with a better time complexity.
@@ -135,7 +155,13 @@ function printFirstTwoNames(array) {
 
 // Starting Code:
 function squareEveryDigit(number) {
-    
-}
+    let currentStr = "";
+    let squaredNums = 0;
+    let stringNum = number.toString();
+    for (let i = 0; i <stringNum.length; i++) {
+      curentStr += +stringNum.charAt(i) * +stringNum.charAt(i)
+    }
+    return currentStr
+    }
 
 squareEveryDigit(946) // When running 946, you should see a result of 811636
