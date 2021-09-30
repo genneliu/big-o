@@ -26,8 +26,8 @@ for (let i = 0; i < numbers.length; i++) {
 // Q: What is the time complexity of of this solution?
 // ANSWER:
 
-// O(1) 
-// return loop prevents it from going past 4
+// O(n) 
+// always n on loop, 
 
 
 // Q: Could you come up with a solution that has a better time complexity? If so, what is that time complexity?
